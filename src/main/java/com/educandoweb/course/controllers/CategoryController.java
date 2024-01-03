@@ -1,7 +1,6 @@
 package com.educandoweb.course.controllers;
 
 import com.educandoweb.course.entites.Category;
-import com.educandoweb.course.repositories.CategoryRepository;
 import com.educandoweb.course.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

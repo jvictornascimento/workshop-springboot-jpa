@@ -4,7 +4,6 @@ import com.educandoweb.course.entites.Order;
 import com.educandoweb.course.entites.Product;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 
 import java.io.Serializable;

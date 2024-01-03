@@ -7,7 +7,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 import java.io.Serializable;
-import java.lang.annotation.Documented;
 import java.util.Objects;
 
 @Entity
@@ -39,6 +38,7 @@ public class OrderItem implements Serializable {
     public void setOrder(Order order){
         id.setOrder(order);
     }
+
     public Product getProduct(){
         return id.getProduct();
     }
