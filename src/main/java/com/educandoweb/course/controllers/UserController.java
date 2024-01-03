@@ -19,23 +19,29 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService service;
-    @GetMapping
+    @GetMapping //http 202
     public ResponseEntity<List<User>> listAll(){
         List<User> list = service.listAll();
         return ResponseEntity.ok().body(list);
     }
-    @GetMapping("/{id}")
+    @GetMapping("/{id}") //http 202
     public ResponseEntity<User> listById(@PathVariable Long id){
         User user = service.findById(id);
         return ResponseEntity.ok().body(user);
     }
 
-    @PostMapping
+    @PostMapping //http 201
     @Transactional
     public ResponseEntity<User> insert(@RequestBody  User user){
         user = service.insert(user);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(user.getId()).toUri();
         return ResponseEntity.created(uri).body(user);
     }
+    @DeleteMapping("/{id}") //http 204
+    public ResponseEntity<Void> delete(@PathVariable  Long id){
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
 
 }
