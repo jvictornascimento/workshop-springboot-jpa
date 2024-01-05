@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-bd
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: springboot_course
+    ports:
+      - "5432:5432"
