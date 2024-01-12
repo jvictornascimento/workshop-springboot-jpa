@@ -28,7 +28,7 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do proj
 - **[Maven](https://maven.apache.org)**
 - **[PostgreeSql](https://www.postgresql.org/)**
 - **[Jpa_Hibernate](https://hibernate.org)**
-- **[H2-DataBase]([https://flywaydb.org](https://www.h2database.com/html/main.html))**
+- **[H2_DataBase](https://flywaydb.org](https://www.h2database.com/html/main.html)**
 
 ---
 
